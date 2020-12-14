@@ -16,3 +16,9 @@ list_of_strings = ['hi', 123]
 print(list_of_strings)
 list_of_combined_data = ['this', 123, 'is', 2354, 'possible']
 print(list_of_combined_data)
+#types attribute
+print(dir(int))
+print(dir(str))
+print(dir(float))
+print(dir(list))
+#-------------------------
