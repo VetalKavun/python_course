@@ -22,3 +22,9 @@ print(dir(str))
 print(dir(float))
 print(dir(list))
 #-------------------------
+#usage of build-in functions
+students_grades = [3.4, 5.6, 6.7]
+avr_grades = sum(students_grades) / len(students_grades)
+print('Student\'s grades sre: ', students_grades)
+print('mean values of grades: ', avr_grades)
+#------------------------------------------------------------
