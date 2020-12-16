@@ -1,10 +1,12 @@
-def greeting(name):
-    return "Hello, %s" % name
+def greeting(name, age):
+    return "Hello, %s! You told, you are: %d" % (name, age)
 
 
-def greeting2(name):
-    return f"Hello, {name}"
+def greeting2(name, age):
+    return f"Hello, {name}! You told, you are: {age}"
 
 
 name = input("Enter your name: ")
-print(greeting2(name))
+age = int(input("Enter your age: "))
+print(greeting2(name, age))
+print(greeting(name, age))
