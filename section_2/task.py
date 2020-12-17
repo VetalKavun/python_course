@@ -18,5 +18,4 @@ while True:
     else:
         out_container.append(input_str.capitalize() + ".")
 
-for item in out_container:
-    print(item)
+print(" ".join(out_container))
