@@ -2,11 +2,8 @@ out_container = []
 
 
 def is_question_sentense(input_str):
-    words_container = input_str.split(" ")
-    if words_container[0].lower() == 'how' \
-            or words_container[0].lower() == 'when' \
-            or words_container[0].lower() == 'why' \
-            or words_container[0].lower() == 'who':
+
+    if input_str.startswith(("who", "how", "where", "why")):
         return True
     else:
         return False
