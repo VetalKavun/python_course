@@ -15,11 +15,14 @@ def load_data(file_path):
 
 
 def get_word_description(word):
-    return data_set[word]
+    if word in data_set:
+        return data_set[word]
+    else:
+        return "Word is not exists! Please double check this one"
 
 
 def get_word_from_user():
-    word = input("Enter the word to search for: ")
+    word = input("Enter the word to search for: ").lower()
     return word
 
 
