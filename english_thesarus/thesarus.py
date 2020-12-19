@@ -5,7 +5,6 @@ data_set = {}
 
 
 def load_data(file_path):
-    data = {}
     if os.path.exists(file_path):
         with open(file_path) as file:
             global data_set
