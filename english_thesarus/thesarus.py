@@ -17,6 +17,8 @@ def load_data(file_path):
 
 
 def get_word_description(word):
+    if word.upper() in data_set.keys():
+        return data_set[word.upper()]
     if word.capitalize() in data_set.keys():
         return data_set[word.capitalize()]
     if word in data_set.keys():
