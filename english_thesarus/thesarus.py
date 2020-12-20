@@ -25,7 +25,7 @@ def get_word_description(word):
             for item in best_matches_word:
                 while True:
                     user_confirmation = input("Did you mean: %s? Enter y - to confirm, "
-                                          "n - to cancellation: " % item).lower()
+                                              "n - to cancellation: " % item).lower()
                     if user_confirmation == 'y':
                         return item
                     elif user_confirmation != 'n':
