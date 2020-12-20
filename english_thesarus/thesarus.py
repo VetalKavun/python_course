@@ -1,5 +1,7 @@
 import os
 import json
+import difflib
+from difflib import get_close_matches
 
 data_set = {}
 
@@ -15,9 +17,16 @@ def load_data(file_path):
 
 
 def get_word_description(word):
-    if word in data_set:
+    if word in data_set.keys():
         return data_set[word]
     else:
+        best_matches_word = get_close_matches(word, data_set.keys(), n=5)
+        if len(best_matches_word) > 1:
+            for item in best_matches_word:
+                user_confirmation = input("Did you mean: %s? Enter y - to confirm, "
+                                          "n - to cancellation: " % item).lower()
+                if user_confirmation == 'y':
+                    return item
         return "Word is not exists! Please double check this one"
 
 
