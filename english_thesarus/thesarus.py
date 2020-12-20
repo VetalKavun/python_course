@@ -23,10 +23,15 @@ def get_word_description(word):
         best_matches_word = get_close_matches(word, data_set.keys(), n=5)
         if len(best_matches_word) > 1:
             for item in best_matches_word:
-                user_confirmation = input("Did you mean: %s? Enter y - to confirm, "
+                while True:
+                    user_confirmation = input("Did you mean: %s? Enter y - to confirm, "
                                           "n - to cancellation: " % item).lower()
-                if user_confirmation == 'y':
-                    return item
+                    if user_confirmation == 'y':
+                        return item
+                    elif user_confirmation != 'n':
+                        print("Did not understand your request")
+                    else:
+                        break
         return "Word is not exists! Please double check this one"
 
 
