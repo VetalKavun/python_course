@@ -24,9 +24,9 @@ def get_dict_of_words(word):
     cursor.execute(query)
     results = cursor.fetchall()
     connection.commit()
-
-    data = dict((word, description) for word, description in results)
-    word_list = get_close_matches(word, data.keys(), n=3)
+    global data_set
+    data_set = dict((word, description) for word, description in results)
+    word_list = get_close_matches(word, data_set.keys(), n=3)
     return word_list
 
 
